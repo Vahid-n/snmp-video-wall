@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SnmpVideoWall.MainWindow" Title="SNMP Video Wall v0.3.12" Background="#080B10" WindowState="Maximized"
+        SystemDecorations="Full" MinWidth="800" MinHeight="600">
+  <Grid RowDefinitions="Auto,* ,Auto" Margin="10">
+    <Border Grid.Row="0" Background="#10151D" CornerRadius="10" Padding="12" Margin="0,0,0,8">
+      <DockPanel LastChildFill="True">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" Spacing="10" VerticalAlignment="Center">
+          <TextBlock Text="Time window" Foreground="#B9C2D0" VerticalAlignment="Center"/>
+          <ComboBox x:Name="TimeWindowCombo" Width="120" SelectedIndex="0" VerticalAlignment="Center">
+            <ComboBoxItem Content="1 minute" Tag="60"/><ComboBoxItem Content="5 minutes" Tag="300"/>
+            <ComboBoxItem Content="15 minutes" Tag="900"/><ComboBoxItem Content="30 minutes" Tag="1800"/>
+            <ComboBoxItem Content="1 hour" Tag="3600"/><ComboBoxItem Content="2 hours" Tag="7200"/><ComboBoxItem Content="4 hours" Tag="14400"/>
+          </ComboBox>
+          <TextBlock Text="● LIVE" Foreground="#55E58A" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+          <Button x:Name="SaveWorkspaceButton" Content="Save layout" Padding="10,5" Background="#263548" Foreground="White"/><Button x:Name="LoadWorkspaceButton" Content="Load layout" Padding="10,5" Background="#263548" Foreground="White"/><Button x:Name="SettingsButton" Content="Settings" Padding="10,5" Background="#263548" Foreground="White"/><Button x:Name="PortsButton" Content="Manage ports" Padding="10,5" Background="#263548" Foreground="White"/><Button x:Name="AboutButton" Content="About" Padding="10,5" Background="#263548" Foreground="White"/>
+        </StackPanel>
+        <StackPanel>
+          <TextBlock Text="SNMP LIVE TRAFFIC MONITOR" FontSize="24" FontWeight="Bold" Foreground="White"/>
+        </StackPanel>
+      </DockPanel>
+    </Border>
+    <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+      <Canvas x:Name="CardsCanvas" Background="Transparent" Width="1200" Height="700" ClipToBounds="False"/>
+    </ScrollViewer>
+    <Border Grid.Row="2" Background="#10151D" CornerRadius="8" Padding="9" Margin="0,8,0,0">
+      <TextBlock x:Name="FooterText" Foreground="#AEB7C5" FontSize="12" Text="Ports: 0  •  Online: 0  •  SNMP: 1s"/>
+    </Border>
+  </Grid>
+</Window>

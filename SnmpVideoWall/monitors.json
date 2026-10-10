@@ -1,0 +1,20 @@
+[
+  {
+    "name": "ASR9K-TEH-01",
+    "ip": "192.0.2.10",
+    "community": "public",
+    "interface": "TenGigE0/0/0/1",
+    "rxOid": "1.3.6.1.2.1.2.2.1.10.1",
+    "txOid": "1.3.6.1.2.1.2.2.1.16.1",
+    "capacityBitsPerSecond": 10000000000
+  },
+  {
+    "name": "ASR920-MSH-01",
+    "ip": "192.0.2.20",
+    "community": "public",
+    "interface": "Gi0/0/0",
+    "rxOid": "1.3.6.1.2.1.2.2.1.10.1",
+    "txOid": "1.3.6.1.2.1.2.2.1.16.1",
+    "capacityBitsPerSecond": 1000000000
+  }
+]
